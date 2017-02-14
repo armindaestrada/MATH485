@@ -1,0 +1,11 @@
+t= 0;
+t_max = 10000;
+N = 100; % number of stem cells about 5*10^5
+tau = 100;
+P_SC = 1/tau; % probability of SC dividing unevenly
+z = 14; %number of times progenitor cell divides before dying
+Ub = 10^-8; %probability of assymetric division gaining jak2 mutation
+alpha = 2; %ratio of symmetric vs. asymmetric
+beta = 5; %additonal number of divisions
+Z_Jak2 = z +beta; %number of divisions progenitor cells with jak2 mutations will undergo before dying
+d = 0.05; 
