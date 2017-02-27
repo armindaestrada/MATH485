@@ -55,7 +55,7 @@ dP1 = (1-P1)*(N/tau)*(1+d)*(1/2+alpha)*Ub;
 %%%%%Scenario (iii). A Progenitor Acquires JAK2V617F Followed by a Mutation
 %%%%%Conferring Self-Renewal.%%%%
 
-%p3 = N*P_SC*(2^(z+gamma-1))*(z+1)*Ua*Ub((t - (z/2+gamma))*(1+d));
+p3 = N*P_SC*(2^(z + gamma - 1))*(z+1)*Ua*Ub*((t - (z/2 + gamma))*(1+d));
 
 
 
