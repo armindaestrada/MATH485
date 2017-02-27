@@ -15,6 +15,7 @@ lineage_cell = z*N*P_SC; %number of progenitor cell at each time step
 Total_Num_Prog = 2*exp((z+1) - 1 )*N*P_SC; %total number of progenitor cells 
 prog_div = N*P_SC*(2*exp(z) -1); % number of progenitor cells that will divide in two
 prog_death = N*P_SC*(2*exp(z)); % number of progenitor cells that will die
+fk = 1; %
 
 
 %Prog_cells = [];
@@ -58,15 +59,15 @@ dP1 = (1-P1)*(N/tau)*(1+d)*(1/2+alpha)*Ub;
 p3 = N*P_SC*(2^(z + gamma - 1))*(z+1)*Ua*Ub*((t - (z/2 + gamma))*(1+d));
 
 
-
+%Hi = 2^(i - 1)*Ub*(
 
 %%%%%Scenario (iv). A Stem Cell Acquires a Mutation Conferring Self-Renewal
 %%%%%to a Progenitor, Followed by the JAK2V617F Mutation Arising in a
 %%%%%Progenitor.%%%%%%%%
 
-
-%Lk = (fk*Ua/2 + (1-fk)); %expected number of progenitors at the most undifferentiated stage carrying the self-renewal mutation
-%p4 = 1 - exp(-(N+P_SC)*sum(Lk*Gk)*(1-d));
+fk = (1 - Ua/2 * (P_SC) -(alpha)*Ua*(P_SC));
+Lk = (fk*Ua/2 + (1-fk)); %expected number of progenitors at the most undifferentiated stage carrying the self-renewal mutation
+%p4 = 1 - exp(-(N+P_SC)*sum(Lk*Gk, 1, t-z)*(1-d));
 
 
 
