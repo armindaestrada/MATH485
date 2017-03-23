@@ -91,8 +91,6 @@ tvec2 = 1:length(P2);
 semilogy(tvec2,P2,'black','LineWidth',2)
 semilogy(tvec,P3,'green')
 man = 0;
-
-tvec3 = z:length(P2)+z-1; %Need to shift P4 to the right to match data.
 semilogy(tvec2,P4)
 legend('P1','P2','P3','P4')
 legend('Location','southeast')
@@ -198,7 +196,7 @@ hold on
 tvec2 = 1:length(P2); 
 semilogy(tvec2,P2,'black')
 semilogy(tvec,P3,'green')
-semilogy(tvec2,P4)     %Totes the wrong equation
+semilogy(tvec2,P4)     %Wrong equation
 legend('P1','P2','P3','P4')
 legend('Location','southeast')
 axis([10 t_max ymin ymax])
