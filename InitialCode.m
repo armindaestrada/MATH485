@@ -50,7 +50,8 @@ dP1 = (1-P1)*(N/tau)*(1+d)*(1/2+alpha)*Ub;
  
  p2 = (N/2)*P_SC*2^(2*z)*Ua*Ub*((t-z)^2)*(1+d);
  
- 
+ plot(p2);
+ axis([0,100 10^-5, 10^-1]);
 
 
 %%%%%Scenario (iii). A Progenitor Acquires JAK2V617F Followed by a Mutation
@@ -65,9 +66,15 @@ p3 = N*P_SC*(2^(z + gamma - 1))*(z+1)*Ua*Ub*((t - (z/2 + gamma))*(1+d));
 %%%%%to a Progenitor, Followed by the JAK2V617F Mutation Arising in a
 %%%%%Progenitor.%%%%%%%%
 
-fk = (1 - Ua/2 * (P_SC) -(alpha)*Ua*(P_SC));
-Lk = (fk*Ua/2 + (1-fk)); %expected number of progenitors at the most undifferentiated stage carrying the self-renewal mutation
-%p4 = 1 - exp(-(N+P_SC)*sum(Lk*Gk, 1, t-z)*(1-d));
+%fk = (1 - (Ua/2) * (P_SC) -(alpha)*Ua*(P_SC))^k;
+%fk = fk* (1 - Ua*P_SC/2 - alpha*Ua*P_SC);
+%Gk = 1 - exp((-((2^z -1)*Ub + exp(-(2^z - 1)*Ub)*(2^z)*Ub*(t-z-k)))
+
+%Lk = (fk*Ua/2 + (1-fk)); %expected number of progenitors at the most undifferentiated stage carrying the self-renewal mutation
+%p4 = 1 - exp(-(N*P_SC)*sum(Lk*Gk, 1, t-z)*(1-d));
+
+
+
 
 
 
