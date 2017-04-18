@@ -17,7 +17,7 @@ graph_num = 0;
 
 for t = 1:t_max
 for i = 1:z
-    H(i) = (2^(i-1))*Ub*(2^(z+y-i)-1)*Ua*(t-(z+y-i));
+    H(i) = (2^(i-1))*Ub*(2^(z+y-i)-1)*Ua*(t-(z+y-i)); %More precise equation for P3
 end
 P3(t) = 1-exp((-N/tau)*sum(H)*(1+d));
 
