@@ -25,7 +25,7 @@ end
 
 
 tvec = 1:t_max;
-
+figure
 semilogy(tvec,P3,'green')
 
 legend('Location','southeast')
@@ -33,5 +33,5 @@ legend('Location','southeast')
 xlabel('Time, \it{t}');
 ylabel('Probability of Cancer Initiation')
 title(y) 
-saveas(gcf,strcat('math485_gamma_equals_',int2str(y),'.png'))
+saveas(gcf,strcat('math485_gamma_equals_',int2str(y),'.png')) %saves  graph
    end
